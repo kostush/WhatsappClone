@@ -16,7 +16,7 @@ import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import ModalScreen from '../screens/ModalScreen';
 import NotFoundScreen from '../screens/NotFoundScreen';
-import TabOneScreen from '../screens/TabOneScreen';
+import ChatsScreen from '../screens/ChatsScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
@@ -103,7 +103,7 @@ function MainTabNavigator() {
       }}>
       <MainTab.Screen
         name="Camera"
-        component={TabOneScreen}
+        component={ChatsScreen}
         options={({ navigation }: RootTabScreenProps<'Camera'>) => ({
           title: 'Camera',
             tabBarLabel:()=>null,
@@ -127,7 +127,7 @@ function MainTabNavigator() {
       />
       <MainTab.Screen
         name="Chats"
-        component={TabTwoScreen}
+        component={ChatsScreen}
         options={{
           title: 'Chats',
           //tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
